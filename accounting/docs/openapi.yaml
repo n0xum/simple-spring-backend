@@ -1,0 +1,26 @@
+openapi: 3.0.1
+info:
+  title: OpenAPI definition
+  version: v0
+servers:
+- url: http://localhost:8080
+  description: Generated server url
+tags:
+- name: Hello
+  description: Simple Hello World API
+paths:
+  /api/hello:
+    get:
+      tags:
+      - Hello
+      summary: Get Hello World message
+      description: Returns a simple Hello World greeting
+      operationId: hello
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+components: {}
